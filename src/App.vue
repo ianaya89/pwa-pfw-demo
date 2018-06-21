@@ -6,7 +6,8 @@
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/posts">Posts</router-link>
+      <router-link to="/posts">Posts</router-link> |
+      <router-link to="/photos">Photos</router-link>
     </div>
     <router-view/>
   </div>
@@ -16,11 +17,13 @@
 export default {
   data () {
     return {
-      isOnline: true
+      isOnline: window.navigator.onLine
     }
   },
 
   created () {
+    window.
+
     window.addEventListener('online', () => (this.isOnline = true))
     window.addEventListener('offline', () => (this.isOnline = false))
   }
